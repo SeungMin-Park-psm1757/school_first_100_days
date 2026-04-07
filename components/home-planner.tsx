@@ -110,52 +110,51 @@ export function HomePlanner({
             <div className="relative grid gap-6 lg:grid-cols-[minmax(0,1fr)_292px]">
               <div className="space-y-5">
                 <div className="flex flex-wrap gap-2">
-                  <span className="section-label">Decision Support</span>
+                  <span className="section-label">판단 지원</span>
                   <span className="pill-badge bg-white text-slate-600 ring-1 ring-slate-200/70">
-                    입학 첫 100일 전용
+                    입학 100일 전용
                   </span>
                 </div>
 
                 <div className="space-y-4">
                   <h1 className="font-heading text-[2.4rem] font-extrabold tracking-tight text-slate-950 sm:text-[3.4rem]">
-                    지금 우리 집에 맞는
+                    우리 집 첫 100일
                     <br />
-                    첫 100일 판단 가이드
+                    지금 할 일
                   </h1>
                   <p className="max-w-3xl text-base leading-8 text-[color:var(--text-soft)] sm:text-[1.05rem]">
-                    {headline} 학교 공지, 돌봄 공백, 방과후 선택, 생활 루틴을 한 번에
-                    묶어 지금 해야 할 일과 다음 선택지를 빠르게 정리합니다.
+                    {headline} 이번 주 행동, 주의점, 다음 선택만 바로 봅니다.
                   </p>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-3">
                   <div className="metric-card bg-[linear-gradient(135deg,rgba(47,111,228,0.12),rgba(255,255,255,0.92))]">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                      Now
+                      할 일
                     </p>
                     <p className="mt-3 font-heading text-3xl font-extrabold text-slate-950">3</p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      이번 주 행동만 먼저 제시
+                      이번 주 3개
                     </p>
                   </div>
                   <div className="metric-card">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                      Why
+                      주의
                     </p>
                     <p className="mt-3 font-heading text-3xl font-extrabold text-slate-950">2</p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      놓치기 쉬운 위험만 압축
+                      핵심 2개
                     </p>
                   </div>
                   <div className="metric-card">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                      Next
+                      단계
                     </p>
                     <p className="mt-3 font-heading text-3xl font-extrabold text-slate-950">
                       D+{form.dayCount}
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      현재 단계에 맞춘 의사결정
+                      현재 위치
                     </p>
                   </div>
                 </div>
@@ -163,12 +162,12 @@ export function HomePlanner({
 
               <div className="rounded-[30px] border border-white/90 bg-[linear-gradient(180deg,rgba(47,111,228,0.1),rgba(255,255,255,0.95))] p-5 shadow-[0_26px_70px_-42px_rgba(47,111,228,0.48)]">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  오늘의 방향
+                  오늘 한눈에
                 </p>
                 <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-slate-950">
-                  판단 부담은 줄이고
+                  입력은 짧게
                   <br />
-                  다음 행동은 선명하게
+                  결과는 바로
                 </h2>
                 <div className="subtle-divider my-5" />
                 <div className="space-y-4">
@@ -177,23 +176,23 @@ export function HomePlanner({
                       입력
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      학교명, 지역, 가정 상황, 자녀 특성
+                      학교·지역·자녀 특성
                     </p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      판단
+                      결과
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      우선순위 3개와 주의점 2개가 바로 정리됩니다.
+                      행동 3개, 주의 2개
                     </p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      연결
+                      다음
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                      타임라인과 추천 화면으로 자연스럽게 이어집니다.
+                      타임라인·추천 연결
                     </p>
                   </div>
                 </div>
@@ -206,14 +205,11 @@ export function HomePlanner({
           <div className="surface-card p-6 sm:p-7">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="section-label">심사위원 데모 시나리오</p>
-                <h2 className="mt-3 panel-title">한 번 클릭으로 상황 전환</h2>
-                <p className="mt-2 panel-copy">
-                  다른 가정 상황을 바로 적용해 홈 요약, 타임라인, 추천 흐름을 빠르게 시연할
-                  수 있습니다.
-                </p>
+                <p className="section-label">데모 시나리오</p>
+                <h2 className="mt-3 panel-title">클릭 한 번으로 전환</h2>
+                <p className="mt-2 panel-copy">상황별 흐름을 바로 시연합니다.</p>
               </div>
-              <span className="pill-badge bg-slate-100 text-slate-600">Preset 3종</span>
+              <span className="pill-badge bg-slate-100 text-slate-600">3종</span>
             </div>
 
             <div className="mt-6 grid gap-3 lg:grid-cols-3">
@@ -255,10 +251,8 @@ export function HomePlanner({
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <p className="section-label">우리 집 상황 입력</p>
-                <h2 className="mt-3 panel-title">100일 플랜 만들기</h2>
-                <p className="mt-2 panel-copy">
-                  길게 묻지 않고, 지금 판단에 필요한 정보만 빠르게 입력받습니다.
-                </p>
+                <h2 className="mt-3 panel-title">100일 플랜</h2>
+                <p className="mt-2 panel-copy">핵심 정보만 입력합니다.</p>
               </div>
 
               <button
@@ -266,7 +260,7 @@ export function HomePlanner({
                 onClick={resetDemoData}
                 className="pill-badge justify-center border border-slate-200 bg-white text-sm text-slate-600 transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900"
               >
-                데모값 다시 불러오기
+                기본값 불러오기
               </button>
             </div>
 
@@ -368,7 +362,7 @@ export function HomePlanner({
                     자녀 특성
                   </p>
                   <p className="mt-2 text-sm text-[color:var(--text-soft)]">
-                    현재 아이와 가까운 특성을 여러 개 고를 수 있습니다.
+                    해당되는 특성만 고르세요.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2.5">
@@ -400,7 +394,7 @@ export function HomePlanner({
                     현재 가장 큰 고민
                   </p>
                   <p className="mt-2 text-sm text-[color:var(--text-soft)]">
-                    한 문장으로 적을수록 추천 우선순위가 더 선명해집니다.
+                    짧을수록 추천이 선명해집니다.
                   </p>
                 </div>
                 <label className="block space-y-2.5 text-sm font-medium text-slate-700">
@@ -455,7 +449,7 @@ export function HomePlanner({
                   {isLoading || isPending ? "플랜 계산 중..." : "100일 플랜 만들기"}
                 </button>
                 <p className="mt-3 text-sm text-[color:var(--text-muted)]">
-                  이번 주 행동과 주의점만 추려 오른쪽 카드에 즉시 반영합니다.
+                  오른쪽 카드에 바로 반영됩니다.
                 </p>
               </div>
 
@@ -472,17 +466,17 @@ export function HomePlanner({
           <div className="surface-card-strong overflow-hidden p-6 sm:p-7">
             <div className="flex flex-wrap items-start gap-3">
               <div className="min-w-0 flex-1">
-                <p className="section-label">AI Summary</p>
+                <p className="section-label">AI 요약</p>
                 <h2 className="mt-3 font-heading text-[1.85rem] font-extrabold leading-[1.15] tracking-tight text-slate-950 sm:text-[2rem]">
-                  지금 무엇을 해야 할지
+                  지금 할 일
                 </h2>
               </div>
-              <span className="pill-badge bg-slate-100 text-slate-600">즉시 실행용</span>
+              <span className="pill-badge bg-slate-100 text-slate-600">바로 실행</span>
             </div>
 
             <div className="mt-6 rounded-[30px] bg-[linear-gradient(135deg,rgba(47,111,228,0.14),rgba(141,184,255,0.14),rgba(255,255,255,0.96))] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                상황 요약
+                상황
               </p>
               <p className="mt-3 text-sm leading-7 text-[color:var(--text-soft)]">
                 {plan.userSummary}
@@ -493,7 +487,7 @@ export function HomePlanner({
               <section className="rounded-[28px] border border-slate-200/80 bg-white p-5">
                 <div className="flex flex-wrap items-start gap-3">
                   <h3 className="min-w-0 flex-1 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-                    이번 주 우선 행동 3가지
+                    이번 주 3가지
                   </h3>
                   <span className="pill-badge bg-official text-primary">공식 정보 기준</span>
                 </div>
@@ -514,7 +508,7 @@ export function HomePlanner({
               <section className="rounded-[28px] border border-amber-200 bg-community/78 p-5">
                 <div className="flex flex-wrap items-start gap-3">
                   <h3 className="min-w-0 flex-1 text-sm font-semibold uppercase tracking-[0.16em] text-[#9a6322]">
-                    놓치기 쉬운 점 2가지
+                    주의 2가지
                   </h3>
                   <span className="pill-badge bg-white text-[#9a6322]">부모 경험 참고</span>
                 </div>
@@ -536,7 +530,7 @@ export function HomePlanner({
               >
                 <p className="text-sm font-semibold text-slate-950">타임라인으로 이어보기</p>
                 <p className="mt-1.5 text-sm text-[color:var(--text-soft)]">
-                  현재 단계에서 무엇부터 체크할지 순서대로 봅니다.
+                  현재 단계 체크 순서를 봅니다.
                 </p>
               </Link>
               <Link
@@ -545,7 +539,7 @@ export function HomePlanner({
               >
                 <p className="text-sm font-semibold text-slate-950">추천 조합 비교하기</p>
                 <p className="mt-1.5 text-sm text-[color:var(--text-soft)]">
-                  우리 집 상황에 맞는 돌봄·방과후 선택지를 비교합니다.
+                  우리 집에 맞는 조합을 비교합니다.
                 </p>
               </Link>
             </div>

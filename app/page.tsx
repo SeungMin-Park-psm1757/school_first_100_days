@@ -15,7 +15,7 @@ import { buildPlan } from "@/lib/mock-ai";
 
 export const metadata: Metadata = {
   title: "홈",
-  description: "가정 상황을 입력하고 입학 후 첫 100일 행동 우선순위를 바로 확인하세요."
+  description: "입력하면 이번 주 할 일 3개를 바로 보여줍니다."
 };
 
 export default function HomePage() {

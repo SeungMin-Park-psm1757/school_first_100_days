@@ -84,10 +84,7 @@ export function TimelineBoard({
             <div>
               <p className="section-label">100일 진행판</p>
               <h1 className="mt-3 panel-title">우리 아이 첫 100일 타임라인</h1>
-              <p className="mt-3 panel-copy">
-                지금 시점에서 중요한 일부터 순서대로 확인해보세요. 해야 할 일은 많아 보여도,
-                실제로는 현재 단계에서 먼저 볼 카드의 순서가 정해져 있습니다.
-              </p>
+              <p className="mt-3 panel-copy">지금 단계 카드만 먼저 보면 됩니다.</p>
 
               <div className="mt-6 h-3 overflow-hidden rounded-full bg-slate-100">
                 <div
@@ -120,7 +117,7 @@ export function TimelineBoard({
 
             <div className="rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(47,111,228,0.12),rgba(255,255,255,0.96))] p-5 shadow-[0_24px_70px_-40px_rgba(47,111,228,0.45)]">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Current Snapshot
+                현재 단계
               </p>
               <p className="mt-3 font-heading text-[2rem] font-extrabold tracking-tight text-slate-950">
                 D+{profile.dayCount} / 100
@@ -128,7 +125,7 @@ export function TimelineBoard({
                 <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
                   현재 단계는{" "}
                   <span className="font-semibold text-slate-950">{profile.currentPhase}</span>
-                  입니다. 오늘은 전체보다 먼저 처리할 카드 순서를 잡는 것이 중요합니다.
+                  입니다. 먼저 볼 카드만 추렸습니다.
                 </p>
               <div className="subtle-divider my-5" />
               <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
@@ -205,7 +202,7 @@ export function TimelineBoard({
                     {(task.sourceType === "official" || task.sourceType === "both") && (
                       <div className="rounded-[24px] bg-official p-4">
                         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                          공공 데이터 기준
+                          공공 기준
                         </p>
                         <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
                           {task.sourceLabel}
@@ -217,7 +214,7 @@ export function TimelineBoard({
                     task.communityTip ? (
                       <div className="rounded-[24px] bg-community p-4">
                         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#996226]">
-                          선배 학부모 팁
+                          부모 팁
                         </p>
                         <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
                           {task.communityTip}
@@ -232,8 +229,7 @@ export function TimelineBoard({
 
           {visibleTasks.length === 0 ? (
             <div className="surface-card p-6 text-sm leading-7 text-[color:var(--text-soft)]">
-              현재 필터 조합에 맞는 카드가 없습니다. 오른쪽 보기 옵션에서 데이터 출처나 완료
-              항목 표시를 조정해 보세요.
+              맞는 카드가 없습니다. 필터를 바꿔보세요.
             </div>
           ) : null}
         </div>
@@ -254,14 +250,11 @@ export function TimelineBoard({
                     Priority {index + 1}
                   </p>
                   <p className="mt-2 text-sm font-semibold text-slate-950">{task.title}</p>
-                  <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
-                    {task.description}
-                  </p>
                 </div>
               ))
             ) : (
               <p className="text-sm leading-6 text-[color:var(--text-soft)]">
-                이 단계의 우선 작업이 모두 정리되었습니다.
+                이 단계 우선 작업이 정리되었습니다.
               </p>
             )}
           </div>
@@ -270,7 +263,7 @@ export function TimelineBoard({
 
         <RevealBlock delay={120}>
           <div className="surface-card p-5">
-          <p className="section-label">보기 필터</p>
+          <p className="section-label">필터</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {[
               ["official", "공공 데이터"],
@@ -301,7 +294,7 @@ export function TimelineBoard({
 
         <RevealBlock delay={160}>
           <div className="surface-card p-5">
-          <p className="section-label">진행 요약</p>
+          <p className="section-label">요약</p>
           <div className="mt-4 grid gap-3">
             <div className="rounded-[24px] bg-white p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">

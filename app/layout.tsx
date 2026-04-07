@@ -102,7 +102,7 @@ export default function RootLayout({
                   <div className="flex flex-col gap-3 xl:items-end">
                     <PrimaryNav />
                     <p className="text-sm text-[color:var(--text-muted)]">
-                      지금 해야 할 일, 그 이유, 다음 선택을 한 화면에서 정리합니다.
+                      지금 할 일과 다음 선택을 바로 봅니다.
                     </p>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function RootLayout({
                       지금 할 일
                     </p>
                     <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
-                      이번 주 행동 우선순위를 3개만 보여줘서 판단 부담을 줄입니다.
+                      이번 주 할 일 3개만 봅니다.
                     </p>
                   </div>
                   <div className="metric-card">
@@ -121,7 +121,7 @@ export default function RootLayout({
                       왜 중요한가
                     </p>
                     <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
-                      공공 정보와 부모 경험을 분리해 근거를 빠르게 읽을 수 있게 만듭니다.
+                      공공 기준과 부모 팁을 나눠 보여줍니다.
                     </p>
                   </div>
                   <div className="metric-card">
@@ -129,7 +129,7 @@ export default function RootLayout({
                       다음 선택
                     </p>
                     <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
-                      타임라인과 추천 조합이 자연스럽게 이어져 발표 흐름도 깔끔합니다.
+                      타임라인과 추천으로 바로 이어집니다.
                     </p>
                   </div>
                 </div>

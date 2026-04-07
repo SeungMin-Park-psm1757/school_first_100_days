@@ -138,9 +138,7 @@ export function RecommendationExplorer({
         }
       } catch {
         if (!cancelled) {
-          setError(
-            "부모 경험 요약을 업데이트하지 못했어요. 추천 카드는 그대로 확인할 수 있습니다."
-          );
+          setError("요약을 업데이트하지 못했어요. 추천 카드는 그대로 볼 수 있습니다.");
         }
       } finally {
         if (!cancelled) {
@@ -171,12 +169,9 @@ export function RecommendationExplorer({
         <div className="surface-card-strong hero-glow overflow-hidden p-6 sm:p-7 lg:p-8">
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_320px]">
           <div>
-            <p className="section-label">Recommendation Explorer</p>
-            <h1 className="mt-3 panel-title">돌봄·방과후 추천 결과</h1>
-            <p className="mt-3 panel-copy">
-              우리 가정 상황에 맞는 선택지를 비교해보세요. 좋은 선택을 많이 보여주는 것이
-              아니라 지금 우리 집이 실제로 선택할 수 있는 조합을 먼저 보여주는 화면입니다.
-            </p>
+            <p className="section-label">추천 조합</p>
+            <h1 className="mt-3 panel-title">돌봄·방과후 추천</h1>
+            <p className="mt-3 panel-copy">지금 가능한 조합 2~3개만 보여줍니다.</p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <label className="space-y-2.5 text-sm font-medium text-slate-700">
@@ -265,12 +260,12 @@ export function RecommendationExplorer({
 
           <div className="rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(47,111,228,0.12),rgba(255,255,255,0.96))] p-5 shadow-[0_24px_70px_-40px_rgba(47,111,228,0.45)]">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-              Product Framing
+              선택 기준
             </p>
             <h2 className="mt-3 font-heading text-[1.9rem] font-extrabold tracking-tight text-slate-950">
-              비교는 쉽게,
+              비교는 짧게,
               <br />
-              선택은 더 현실적으로
+              결정은 현실적으로
             </h2>
             <div className="subtle-divider my-5" />
             <div className="space-y-4">
@@ -279,23 +274,23 @@ export function RecommendationExplorer({
                   기준
                 </p>
                 <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                  주중 공백, 보호자 유형, 자녀 특성, 실행 시간
+                  공백·시간·자녀 특성
                 </p>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                  추천 수
+                  추천
                 </p>
                 <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                  넓게 퍼뜨리지 않고 2~3개의 현실적인 조합만 먼저 제안합니다.
+                  2~3개만 제안합니다.
                 </p>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                  확인 포인트
+                  체크
                 </p>
                 <p className="mt-1 text-sm leading-6 text-[color:var(--text-soft)]">
-                  좋은 카드보다 먼저 체크해야 할 위험요소를 같이 보여줍니다.
+                  위험요소도 함께 봅니다.
                 </p>
               </div>
             </div>
@@ -309,7 +304,7 @@ export function RecommendationExplorer({
           {isFallback ? (
             <RevealBlock delay={40}>
               <div className="surface-card p-5 text-sm leading-7 text-[color:var(--text-soft)]">
-                정확히 일치하는 카드가 없어 가장 가까운 조합을 먼저 보여드리고 있습니다.
+                정확히 맞는 카드가 없어 가까운 조합을 먼저 보여드립니다.
               </div>
             </RevealBlock>
           ) : null}
@@ -321,7 +316,7 @@ export function RecommendationExplorer({
                   <div>
                     <div className="flex flex-wrap gap-2">
                       <span className="pill-badge bg-slate-100 text-slate-500">
-                        Option {index + 1}
+                        안 {index + 1}
                       </span>
                       <SourceBadge source={recommendation.sourceType} />
                       <span className="pill-badge bg-white text-slate-600 ring-1 ring-slate-200">
@@ -353,7 +348,7 @@ export function RecommendationExplorer({
                 <div className="mt-6 grid gap-4 lg:grid-cols-2">
                   <div className="rounded-[24px] bg-slate-50/92 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                      추천 이유
+                      왜 맞나
                     </p>
                     <ul className="mt-3 space-y-2.5">
                       {recommendation.fitReasons.map((reason) => (
@@ -369,7 +364,7 @@ export function RecommendationExplorer({
 
                   <div className="rounded-[24px] bg-community/78 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#996226]">
-                      확인 필요
+                      먼저 확인
                     </p>
                     <ul className="mt-3 space-y-2.5">
                       {recommendation.needsCheck.map((item) => (
@@ -386,7 +381,7 @@ export function RecommendationExplorer({
 
                 <div className="mt-5 rounded-[24px] border border-slate-200 bg-white p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                    다음 체크
+                    다음 한 걸음
                   </p>
                   <p className="mt-2 text-sm leading-6 text-[color:var(--text-soft)]">
                     {recommendation.nextStep}
@@ -402,19 +397,19 @@ export function RecommendationExplorer({
             <div className="surface-card-strong p-6 sm:p-7">
             <div className="flex flex-wrap items-start gap-3">
               <div className="min-w-0 flex-1">
-                <p className="section-label">AI Panel</p>
+                <p className="section-label">AI 요약</p>
                 <h2 className="mt-3 font-heading text-[1.85rem] font-extrabold leading-[1.15] tracking-tight text-slate-950 sm:text-[2rem]">
-                  선택 이유 요약
+                  선택 요약
                 </h2>
               </div>
               <span className="pill-badge bg-slate-100 text-slate-500">
-                {isLoading ? "업데이트 중" : "최신 상태"}
+                {isLoading ? "반영 중" : "반영 완료"}
               </span>
             </div>
 
             <div className="mt-6 rounded-[30px] bg-[linear-gradient(135deg,rgba(47,111,228,0.14),rgba(141,184,255,0.14),rgba(255,255,255,0.96))] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                상황 요약
+                한줄 요약
               </p>
               <p className="mt-3 text-sm leading-7 text-[color:var(--text-soft)]">
                 {panel.summary}
@@ -424,7 +419,7 @@ export function RecommendationExplorer({
             <div className="mt-6 space-y-4">
               <section className="rounded-[28px] border border-slate-200 bg-white p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  추천 이유 3가지
+                  이유 3가지
                 </p>
                 <ul className="mt-4 space-y-3">
                   {panel.reasons.map((reason) => (
@@ -438,7 +433,7 @@ export function RecommendationExplorer({
 
               <section className="rounded-[28px] border border-amber-200 bg-community/78 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#996226]">
-                  놓치기 쉬운 점
+                  주의
                 </p>
                 <ul className="mt-4 space-y-3">
                   {panel.cautions.map((caution) => (
@@ -452,7 +447,7 @@ export function RecommendationExplorer({
 
               <section className="rounded-[28px] border border-slate-200 bg-slate-50/92 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                  부모 팁 요약
+                  부모 팁
                 </p>
                 <p className="mt-3 text-sm leading-7 text-[color:var(--text-soft)]">
                   {panel.parentTipSummary}

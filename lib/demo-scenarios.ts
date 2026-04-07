@@ -6,7 +6,7 @@ const scenarios: Array<Omit<DemoScenario, "plan">> = [
     id: "dual-income-care-gap",
     label: "시나리오 A",
     title: "맞벌이 + 하교 후 돌봄 공백",
-    summary: "가장 기본적인 심사 데모 흐름입니다. 하교 직후 공백과 학교 적응을 함께 보여줍니다.",
+    summary: "하교 공백과 학교 적응을 함께 보는 기본 데모입니다.",
     profile: {
       schoolName: "서울가람초등학교",
       region: "서울 성동구",
@@ -21,7 +21,7 @@ const scenarios: Array<Omit<DemoScenario, "plan">> = [
     id: "routine-first-home",
     label: "시나리오 B",
     title: "재택 중심 + 생활 루틴 정착",
-    summary: "방과후를 무조건 늘리기보다 생활 리듬과 피로도를 먼저 보는 케이스를 보여줍니다.",
+    summary: "활동 수보다 생활 리듬을 먼저 보는 데모입니다.",
     profile: {
       schoolName: "성남푸른초등학교",
       region: "경기 성남시",
@@ -36,7 +36,7 @@ const scenarios: Array<Omit<DemoScenario, "plan">> = [
     id: "shift-work-flex",
     label: "시나리오 C",
     title: "교대근무 + 비상 동선 준비",
-    summary: "가족 일정이 일정하지 않은 상황에서 공백 대응과 대체 귀가 동선을 강조하는 데모입니다.",
+    summary: "공백 대응과 비상 동선을 강조하는 데모입니다.",
     profile: {
       schoolName: "부산해오름초등학교",
       region: "부산 해운대구",
