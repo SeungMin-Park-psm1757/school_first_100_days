@@ -13,7 +13,7 @@ import { buildCommunitySummary } from "@/lib/mock-ai";
 
 export const metadata: Metadata = {
   title: "추천 결과",
-  description: "우리 가정 상황에 맞는 돌봄·방과후 조합을 비교하고 선택 이유를 확인하세요."
+  description: "지금 가능한 돌봄·방과후 조합 2~3개를 비교합니다."
 };
 
 export default function RecommendationsPage() {

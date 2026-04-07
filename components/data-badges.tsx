@@ -7,17 +7,17 @@ const sourceMeta: Record<
   official: {
     className: "border-sky-200 bg-official text-[#1d5cc6]",
     dotClassName: "bg-[#4d8cf6]",
-    label: "공공 데이터"
+    label: "공공 기준"
   },
   community: {
     className: "border-amber-200 bg-community text-[#a0641d]",
     dotClassName: "bg-[#df9b38]",
-    label: "부모 경험"
+    label: "부모 팁"
   },
   both: {
     className: "border-indigo-200 bg-both text-[#5856be]",
     dotClassName: "bg-[#7c7cec]",
-    label: "혼합 근거"
+    label: "혼합"
   }
 };
 
@@ -59,7 +59,7 @@ export function PriorityBadge({ priority }: { priority: PriorityLevel }) {
     <span
       className={`pill-badge border ${meta.className}`}
     >
-      우선도 {meta.label}
+      {meta.label}
     </span>
   );
 }

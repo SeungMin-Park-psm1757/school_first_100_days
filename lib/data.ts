@@ -30,6 +30,7 @@ export const workTypeOptions: WorkType[] = [
 ];
 
 export const regionOptions = [
+  "서울 노원구",
   "서울 성동구",
   "서울 송파구",
   "서울 마포구",

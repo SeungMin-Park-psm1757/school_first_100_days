@@ -5,7 +5,7 @@ import { phaseOrder, timelineTasks, userProfile } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "타임라인",
-  description: "입학 준비부터 100일 회고까지 현재 시점에 맞는 우선 작업을 확인하세요."
+  description: "현재 단계에서 볼 카드만 추려 보여줍니다."
 };
 
 export default function TimelinePage() {
