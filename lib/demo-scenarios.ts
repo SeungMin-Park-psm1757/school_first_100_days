@@ -8,8 +8,8 @@ const scenarios: Array<Omit<DemoScenario, "plan">> = [
     title: "맞벌이 + 하교 후 돌봄 공백",
     summary: "하교 공백과 학교 적응을 함께 보는 기본 데모입니다.",
     profile: {
-      schoolName: "서울가람초등학교",
-      region: "서울 성동구",
+      schoolName: "서울 태랑초등학교",
+      region: "서울 노원구",
       guardianWorkType: "맞벌이",
       childTraits: ["낯가림이 심한 편", "규칙이 정해지면 안정적임"],
       mainConcern: "하교 후 돌봄 공백이 걱정돼요",
